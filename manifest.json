@@ -1,0 +1,26 @@
+{
+    "name": "G-Core feed",
+    "version": "1.1.0",
+    "manifest_version": 2,
+    "description": "G-Core feed",
+    "icons" : {
+      "16" : "icon.png",
+      "48" : "icon.png",
+      "128" : "icon.png"
+    },
+    "browser_action": {
+      "default_title": "G-Core feed",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+        "https://www.g-cores.com/",
+        "http://www.g-cores.com/",
+        "notifications",
+        "storage",
+        "background"
+    ],
+    "background":{
+        "scripts": ["background.js","jquery-3.2.1.min.js"]
+    }
+  }

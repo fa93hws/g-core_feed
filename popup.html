@@ -1,0 +1,115 @@
+<html>
+<head>
+    <style>
+        body{
+            width:320px;
+        }
+        button{
+            width:60px;
+        }
+        div{
+            padding:10px;
+            text-align:center;
+        }
+        table{
+            display:block;
+            border-collapse: collapse;
+            width:80%;
+            height:300px;
+            overflow:auto;
+            margin:0 auto;
+        }
+        tr{
+            border-bottom: 1px solid black;
+            border-top: 1px solid black;
+        }
+        .id-textbox{
+            width:50px;
+        }
+        .id-td{
+            max-width:50px;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+        }
+        .name-textbox{
+            width:70px;
+        }
+        .name-td{
+            max-width:150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size:12px;
+        }
+        .date-td{
+            width:70px;
+            font-size:12px;
+        }
+        .delete-td{
+            width:20px;
+            cursor: pointer;
+        }
+        .delete-td > p{
+            color:red;
+            font-size:20px;
+        }
+        .show{
+            display:block;
+        }
+        .hide{
+            display:none;
+        }
+        tr.center>td{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="add-user-div">
+        <!-- add user panel -->
+        User id:
+        <input type="text" id="add-user-by-id-txtbox" class="id-textbox"/>
+        <button
+            id="add-user-by-id-button"
+        > Search </button>
+        </br>
+        <div id="add-user-by-id-resdiv" class="hide">
+            <p id="add-user-by-id-result"></p>
+        </div>
+        <div id="add-user-confirm-div" class="hide">
+            Id: <input
+                type="text"
+                id="add-user-confirm-id"
+                class="id-textbox"
+                disabled = true
+             />
+            Name: <input 
+                    type="text"
+                    id="add-user-confirm-name"
+                    class="name-textbox"
+                    disabled = true
+                />
+            <input type="text" id="add-user-confirm-last-article-id" class="hide"/>
+            <input type="text" id="add-user-confirm-last-article-date" class="hide"/>
+            <button id="add-user-confirm-button"> Confirm </button>
+        </div>
+    </div>
+
+
+    <div id="latest-div">
+    </div>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="popup.js"></script>
+
+    <!-- Testing -->
+    <div id="devpage" class="hide">
+        <button
+            id="test-button"
+        > test </button>
+        <p id="test-result"> </p>
+    </div>
+    <script src="test.js"></script>
+</body>
+</html>
