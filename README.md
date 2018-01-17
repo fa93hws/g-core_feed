@@ -4,3 +4,4 @@
 3. Timeline page
 4. 'follow' button on personal page
 5. Better UI
+6. Fixed width table cell
